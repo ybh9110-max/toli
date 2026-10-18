@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>後台管理 · TOLI地毯產品資料庫</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#C8161D;--ink:#1A1A1A;--sub:#767676;--faint:#9A9A9A;--line:#E5E5E3;--bg2:#F7F7F5;--ok:#0d7d5a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter','Noto Sans TC',-apple-system,"Microsoft JhengHei",sans-serif;
+  color:var(--ink);background:#fff;line-height:1.7;font-size:14px}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,textarea,select{font-family:inherit;font-size:14px;width:100%;padding:9px 11px;
+  border:1px solid var(--line);border-radius:2px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ink)}
+textarea{resize:vertical;min-height:70px;line-height:1.7}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* 登入 */
+.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.login .box{width:100%;max-width:340px}
+.login h1{font-size:20px;font-weight:700;letter-spacing:.04em}
+.login .en{font-size:10.5px;letter-spacing:.22em;color:var(--faint);font-weight:600;margin-top:4px}
+.login form{margin-top:26px}
+.login label{display:block;font-size:11px;letter-spacing:.14em;color:var(--faint);
+  font-weight:600;margin-bottom:7px}
+.login .err{color:var(--red);font-size:13px;margin-top:10px;min-height:20px}
+.login .back{display:block;margin-top:22px;font-size:13px;color:var(--sub)}
+
+/* 主體 */
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:20}
+.hd{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.hd b{font-size:15px;font-weight:700;letter-spacing:.03em}
+.hd .r{display:flex;gap:8px;align-items:center}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);overflow-x:auto}
+.tabs button{padding:13px 20px;font-size:14px;color:var(--sub);white-space:nowrap;
+  border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs button.on{color:var(--ink);font-weight:700;border-bottom-color:var(--red)}
+
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;
+  padding:8px 15px;border:1px solid var(--line);border-radius:2px;transition:.15s;white-space:nowrap}
+.btn:hover{border-color:var(--ink);background:var(--bg2)}
+.btn.pri{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.pri:hover{background:var(--red);border-color:var(--red)}
+.btn.dg{color:var(--red);border-color:rgba(200,22,29,.35)}
+.btn.dg:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.btn.sm{padding:5px 11px;font-size:12px}
+
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:22px 0 16px;flex-wrap:wrap}
+.bar .t{font-size:16px;font-weight:700;letter-spacing:.03em}
+.bar .t span{font-weight:400;color:var(--faint);font-size:13px;margin-left:8px}
+
+.row{border:1px solid var(--line);margin-bottom:10px}
+.row .rh{display:flex;align-items:center;gap:12px;padding:13px 16px;cursor:pointer;transition:.15s}
+.row .rh:hover{background:var(--bg2)}
+.row.open .rh{background:var(--bg2);border-bottom:1px solid var(--line)}
+.row .rh .lv{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:#fff;
+  background:var(--red);padding:2px 7px;flex-shrink:0}
+.row .rh .lv.g{background:var(--ink)}
+.row .rh .nm{font-weight:500;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .rh .mt{font-size:12.5px;color:var(--faint);flex-shrink:0}
+.row .rh .hid{font-size:11px;color:var(--red);border:1px solid rgba(200,22,29,.3);padding:1px 6px}
+.row .bd{display:none;padding:18px 16px}
+.row.open .bd{display:block}
+.f{margin-bottom:14px}
+.f label{display:block;font-size:11px;letter-spacing:.12em;color:var(--faint);
+  font-weight:600;margin-bottom:6px}
+.f .tip{font-size:11.5px;color:var(--faint);margin-top:5px;line-height:1.6}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.chkline{display:flex;gap:20px;align-items:center;padding:4px 0}
+.chkline label{display:flex;gap:7px;align-items:center;font-size:13.5px;
+  letter-spacing:0;color:var(--ink);font-weight:400;margin:0;cursor:pointer}
+.chkline input{width:auto}
+.acts{display:flex;gap:8px;padding-top:6px;border-top:1px solid var(--line);margin-top:6px}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(80px);
+  background:var(--ink);color:#fff;padding:12px 22px;border-radius:2px;font-size:13.5px;
+  opacity:0;transition:.3s;z-index:100;pointer-events:none;max-width:90vw}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast.bad{background:var(--red)}
+
+.note{background:var(--bg2);border-left:3px solid var(--red);padding:14px 16px;
+  font-size:13px;color:var(--sub);margin-bottom:18px;line-height:1.75}
+.note b{color:var(--ink)}
+.mode{font-size:11.5px;padding:3px 9px;border:1px solid var(--line);color:var(--sub)}
+.mode.live{border-color:var(--ok);color:var(--ok)}
+footer{padding:40px 0 60px;color:var(--faint);font-size:12px}
+@media(max-width:720px){.f2,.f3{grid-template-columns:1fr}.hd b{font-size:13px}}
+</style>
+</head>
+<body>
+
+<div id="login" class="login">
+  <div class="box">
+    <h1>後台管理</h1>
+    <div class="en">ADMIN</div>
+    <form onsubmit="doLogin(event)">
+      <label>管理密碼</label>
+      <input id="pw" type="password" autocomplete="current-password" autofocus>
+      <div class="err" id="lerr"></div>
+      <button class="btn pri" style="width:100%;justify-content:center" type="submit">登入</button>
+    </form>
+    <a class="back" href="index.html">&#8249; 返回網站首頁</a>
+  </div>
+</div>
+
+<div id="main" style="display:none">
+  <header>
+    <div class="wrap hd">
+      <b>TOLI地毯產品資料庫 · 後台</b>
+      <div class="r">
+        <span class="mode" id="mode"></span>
+        <button class="btn" onclick="location.href='index.html'">看網站</button>
+        <button class="btn pri" onclick="save()">儲存變更</button>
+      </div>
+    </div>
+    <div class="wrap"><div class="tabs" id="tabs"></div></div>
+  </header>
+  <div class="wrap"><div id="panel"></div></div>
+  <footer class="wrap">資料最後更新：<span id="upd"></span></footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   設定 —— 部署 GAS 後把網址填在這裡
+   ============================================================ */
+var API_URL = '';
+
+/* ============================================================ */
+var D = null, PW = '', TAB = 'products', LIVE = false;
+var $ = function (i) { return document.getElementById(i); };
+var esc = function (s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+};
+function toast(msg, bad) {
+  var t = $('toast'); t.textContent = msg;
+  t.className = 'toast on' + (bad ? ' bad' : '');
+  clearTimeout(t._t); t._t = setTimeout(function () { t.className = 'toast'; }, 3200);
+}
+function post(body) {
+  return fetch(API_URL, {
+    method: 'POST', redirect: 'follow',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(body)
+  }).then(function (r) { return r.json(); });
+}
+
+/* ---------------- 登入 ---------------- */
+var PRELOAD = null;
+
+/* 本機模式：一開啟就顯示選檔區（file:// 無法自動讀取 data.json） */
+function initLocalPicker() {
+  if (API_URL) return;
+  var box = document.querySelector('#login .box');
+  var d = document.createElement('div');
+  d.id = 'pickbox';
+  d.innerHTML =
+    '<div style="margin-top:18px;padding:14px;background:var(--bg2);border-left:3px solid var(--red)">' +
+    '<label style="display:block;font-size:11px;letter-spacing:.14em;color:var(--faint);font-weight:600;margin-bottom:8px">資料檔 DATA.JSON</label>' +
+    '<div id="pkstate" style="font-size:12.5px;color:var(--sub);margin-bottom:9px">讀取中…</div>' +
+    '<input id="pick" type="file" accept=".json,application/json" style="font-size:12.5px;padding:6px;border:0;background:none">' +
+    '</div>';
+  box.appendChild(d);
+
+  document.getElementById('pick').addEventListener('change', function () {
+    var f = this.files[0]; if (!f) return;
+    var r = new FileReader();
+    r.onload = function () {
+      try {
+        var j = JSON.parse(r.result);
+        if (!j.products) throw 0;
+        PRELOAD = j;
+        pkState('✓ 已載入 ' + f.name + '（產品 ' + j.products.length + ' 筆、案例 ' + j.cases.length + ' 筆）', 1);
+      } catch (e) { pkState('這個檔案讀不出來，請確認選的是 data.json', 0); }
+    };
+    r.readAsText(f, 'utf-8');
+  });
+
+  fetch('data.json').then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (j) {
+      PRELOAD = j;
+      pkState('✓ 已自動載入 data.json（產品 ' + j.products.length + ' 筆）', 1);
+    })
+    .catch(function () {
+      pkState('瀏覽器擋住本機讀取，請按下方按鈕選擇 toli-carpet 資料夾裡的 data.json', 0);
+    });
+}
+function pkState(msg, ok) {
+  var e = document.getElementById('pkstate');
+  if (!e) return;
+  e.textContent = msg;
+  e.style.color = ok ? 'var(--ok)' : 'var(--sub)';
+}
+
+function doLogin(e) {
+  e.preventDefault();
+  var pw = $('pw').value;
+  $('lerr').textContent = '';
+  if (!API_URL) {
+    if (pw !== '3323') { $('lerr').textContent = '密碼錯誤'; return; }
+    if (!PRELOAD) { $('lerr').textContent = '請先在下方選擇 data.json'; return; }
+    PW = pw; LIVE = false; start(PRELOAD); return;
+  }
+  $('lerr').textContent = '驗證中…';
+  post({ action: 'login', pw: pw }).then(function (r) {
+    if (!r.ok) { $('lerr').textContent = r.error || '密碼錯誤'; return; }
+    PW = pw; LIVE = true; loadLive();
+  }).catch(function () { $('lerr').textContent = '無法連線到後端，請確認 API 網址'; });
+}
+
+function loadLive() {
+  fetch(API_URL + '?action=read').then(function (r) { return r.json(); }).then(start)
+    .catch(function () { $('lerr').textContent = '讀取資料失敗'; });
+}
+function start(d) {
+  D = d;
+  (D.cases || []).forEach(function (c) { c.coverShow = (Number(c.cover) || 0) + 1; });
+  $('login').style.display = 'none';
+  $('main').style.display = '';
+  $('upd').textContent = d.updated || '—';
+  $('mode').textContent = LIVE ? '● 連線後台（存檔後網站立即更新）' : '○ 本機模式（存檔會下載 data.json）';
+  $('mode').className = 'mode' + (LIVE ? ' live' : '');
+  paintTabs(); paint();
+}
+
+/* ---------------- 分頁 ---------------- */
+var TABS = [
+  { k: 'products', n: '產品' }, { k: 'cases', n: '案例' }, { k: 'certs', n: '認證' },
+  { k: 'faqs', n: '常見問答' }, { k: 'site', n: '網站設定' }
+];
+function paintTabs() {
+  $('tabs').innerHTML = TABS.map(function (t) {
+    var c = t.k === 'site' ? '' : ' <span style="opacity:.55">' + (D[t.k] || []).length + '</span>';
+    return '<button class="' + (TAB === t.k ? 'on' : '') + '" onclick="TAB=\'' + t.k + '\';paintTabs();paint()">' +
+      t.n + c + '</button>';
+  }).join('');
+}
+
+/* ---------------- 欄位小工具 ---------------- */
+function fld(label, path, tip, type) {
+  var v = path.split('.').reduce(function (o, k) { return o == null ? '' : o[k]; }, D);
+  var tag = type === 'area'
+    ? '<textarea oninput="setv(\'' + path + '\',this.value)">' + esc(v) + '</textarea>'
+    : '<input type="' + (type || 'text') + '" value="' + esc(v) + '" oninput="setv(\'' + path + '\',this.value)">';
+  return '<div class="f"><label>' + label + '</label>' + tag +
+    (tip ? '<div class="tip">' + tip + '</div>' : '') + '</div>';
+}
+function setv(path, val) {
+  var ks = path.split('.'), o = D;
+  for (var i = 0; i < ks.length - 1; i++) o = o[ks[i]];
+  o[ks[ks.length - 1]] = val;
+}
+function setn(path, val) { setv(path, Number(val) || 0); }
+function setb(path, el) { setv(path, el.checked ? 1 : 0); }
+function toggle(el) { el.parentNode.classList.toggle('open'); }
+function del(list, i, name) {
+  if (!confirm('確定刪除「' + name + '」？\n（要按上方「儲存變更」後才會真正生效）')) return;
+  D[list].splice(i, 1); paintTabs(); paint(); toast('已刪除，記得按儲存變更');
+}
+function up(list, i) { if (i < 1) return; var a = D[list]; var t = a[i - 1]; a[i - 1] = a[i]; a[i] = t; paint(); }
+function down(list, i) { var a = D[list]; if (i >= a.length - 1) return; var t = a[i + 1]; a[i + 1] = a[i]; a[i] = t; paint(); }
+
+/* ---------------- 各分頁畫面 ---------------- */
+function paint() {
+  var p = $('panel');
+  if (TAB === 'products') p.innerHTML = viewProducts();
+  else if (TAB === 'cases') p.innerHTML = viewCases();
+  else if (TAB === 'certs') p.innerHTML = viewCerts();
+  else if (TAB === 'faqs') p.innerHTML = viewFaqs();
+  else p.innerHTML = viewSite();
+}
+
+function rowHead(badge, badgeGray, name, meta, show) {
+  return '<div class="rh" onclick="toggle(this)">' +
+    (badge ? '<span class="lv' + (badgeGray ? ' g' : '') + '">' + esc(badge) + '</span>' : '') +
+    '<span class="nm">' + esc(name) + '</span>' +
+    (show ? '' : '<span class="hid">未顯示</span>') +
+    '<span class="mt">' + esc(meta) + '</span></div>';
+}
+
+function viewProducts() {
+  var L = { 1: '第1階 系列', 2: '第2階 底材', 3: '第3階 設計主題' };
+  var h = '<div class="note">階層說明：<b>第 1 階</b>＝系列本身（系列影片／系列語音）；' +
+    '<b>第 2 階</b>＝底材（如 Sustive Back，僅 GA3600 有）；<b>第 3 階</b>＝設計主題或子系列。<br>' +
+    '檔名欄位只要填檔名即可（例如 <b>p-the-lake.pdf</b>），檔案本身放在 GitHub 的 assets 資料夾。</div>';
+  h += '<div class="bar"><div class="t">產品<span>共 ' + D.products.length + ' 筆</span></div>' +
+    '<button class="btn" onclick="addProduct()">＋ 新增產品</button></div>';
+  h += D.products.map(function (p, i) {
+    return '<div class="row">' +
+      rowHead(L[p.level] || '第3階', p.level !== 1, (p.series || '') + '　' + (p.subseries || ''),
+        [p.pdf ? 'PDF' : '', p.audio ? '語音' : '', p.youtube ? '影片' : ''].filter(String).join(' · '), p.show) +
+      '<div class="bd">' +
+      '<div class="f3">' +
+        '<div class="f"><label>系列</label><select onchange="setv(\'products.' + i + '.series\',this.value)">' +
+          ['GA3600', 'GA400'].map(function (s) { return '<option' + (p.series === s ? ' selected' : '') + '>' + s + '</option>'; }).join('') +
+        '</select></div>' +
+        '<div class="f"><label>階層</label><select onchange="setn(\'products.' + i + '.level\',this.value)">' +
+          [1, 2, 3].map(function (n) { return '<option value="' + n + '"' + (Number(p.level) === n ? ' selected' : '') + '>' + L[n] + '</option>'; }).join('') +
+        '</select></div>' +
+        fld('名稱', 'products.' + i + '.subseries') +
+      '</div>' +
+      fld('說明', 'products.' + i + '.desc', '顯示在名稱下方的一句話介紹', 'area') +
+      '<div class="f3">' +
+        fld('PDF 檔名', 'products.' + i + '.pdf', '例：p-the-lake.pdf') +
+        fld('語音檔名', 'products.' + i + '.audio', '例：p-the-lake.m4a') +
+        fld('YouTube 網址', 'products.' + i + '.youtube', '只有第 1 階需要') +
+      '</div>' +
+      '<div class="chkline"><label><input type="checkbox"' + (p.show ? ' checked' : '') +
+        ' onchange="setb(\'products.' + i + '.show\',this)">在網站上顯示</label></div>' +
+      '<div class="acts"><button class="btn sm" onclick="up(\'products\',' + i + ')">↑ 上移</button>' +
+      '<button class="btn sm" onclick="down(\'products\',' + i + ')">↓ 下移</button>' +
+      '<button class="btn sm dg" onclick="del(\'products\',' + i + ',\'' + esc(p.subseries) + '\')">刪除</button></div>' +
+      '</div></div>';
+  }).join('');
+  return h;
+}
+function addProduct() {
+  D.products.push({ id: 'P' + Date.now(), level: 3, series: 'GA3600', subseries: '新產品',
+    name: '新產品', desc: '', pdf: '', audio: '', youtube: '', show: 1 });
+  paintTabs(); paint(); toast('已新增，請往下捲動編輯');
+}
+
+function viewCases() {
+  var h = '<div class="note">照片檔名請用 <b>|</b> 分隔，順序就是網站上的顯示順序。<br>' +
+    '新增案例時，先按「產生檔名」拿到一組建議檔名，把照片依此命名後上傳到 GitHub 的 assets 資料夾即可。<br>' +
+    '色號同樣用 <b>|</b> 分隔，數量要和照片數一致（沒有色號就留空，例如 <b>GA36306||GA36306</b>）。</div>';
+  h += '<div class="bar"><div class="t">案例<span>共 ' + D.cases.length + ' 筆</span></div>' +
+    '<button class="btn" onclick="addCase()">＋ 新增案例</button></div>';
+  h += D.cases.map(function (c, i) {
+    var files = (c.photos || []).map(function (x) { return x.f; }).join('|');
+    var codes = (c.photos || []).map(function (x) { return x.code || ''; }).join('|');
+    return '<div class="row">' +
+      rowHead(c.region, c.region !== '台灣', c.title, (c.photos || []).length + ' 張 · ' + (c.date || ''), c.show) +
+      '<div class="bd">' +
+      '<div class="f3">' +
+        '<div class="f"><label>地區</label><select onchange="setv(\'cases.' + i + '.region\',this.value)">' +
+          ['台灣', '日本'].map(function (s) { return '<option' + (c.region === s ? ' selected' : '') + '>' + s + '</option>'; }).join('') +
+        '</select></div>' +
+        fld('案名', 'cases.' + i + '.title') +
+        fld('系列', 'cases.' + i + '.series', '例：GA3600 或 GA3600、GA400') +
+      '</div>' +
+      '<div class="f3">' +
+        fld('地點', 'cases.' + i + '.location') +
+        fld('日期', 'cases.' + i + '.date', '例：2025年11月') +
+        fld('封面第幾張', 'cases.' + i + '.coverShow', '從 1 開始；留 1 就是第一張') +
+      '</div>' +
+      fld('說明', 'cases.' + i + '.desc', '', 'area') +
+      '<div class="f"><label>照片檔名（以 | 分隔）</label>' +
+        '<textarea oninput="setPhotos(' + i + ',this.value,null)">' + esc(files) + '</textarea>' +
+        '<div class="tip">目前 ' + (c.photos || []).length + ' 張　' +
+        '<button class="btn sm" style="margin-left:6px" onclick="genNames(' + i + ')">產生檔名</button></div></div>' +
+      '<div class="f"><label>色號（以 | 分隔，順序對應照片）</label>' +
+        '<textarea oninput="setPhotos(' + i + ',null,this.value)">' + esc(codes) + '</textarea></div>' +
+      '<div class="chkline">' +
+        '<label><input type="checkbox"' + (c.show ? ' checked' : '') + ' onchange="setb(\'cases.' + i + '.show\',this)">在網站上顯示</label>' +
+        '<label><input type="checkbox"' + (c.home ? ' checked' : '') + ' onchange="setb(\'cases.' + i + '.home\',this)">首頁精選</label>' +
+      '</div>' +
+      '<div class="acts"><button class="btn sm" onclick="up(\'cases\',' + i + ')">↑ 上移</button>' +
+      '<button class="btn sm" onclick="down(\'cases\',' + i + ')">↓ 下移</button>' +
+      '<button class="btn sm dg" onclick="del(\'cases\',' + i + ',\'' + esc(c.title) + '\')">刪除</button></div>' +
+      '</div></div>';
+  }).join('');
+  return h;
+}
+function setPhotos(i, files, codes) {
+  var c = D.cases[i];
+  var f = files === null ? (c.photos || []).map(function (x) { return x.f; }) : files.split('|');
+  var k = codes === null ? (c.photos || []).map(function (x) { return x.code || ''; }) : codes.split('|');
+  c.photos = f.filter(function (x) { return String(x).trim(); })
+    .map(function (x, n) { return { f: String(x).trim(), code: (k[n] || '').trim() }; });
+}
+function genNames(i) {
+  var n = prompt('這個案例有幾張照片？', String((D.cases[i].photos || []).length || 5));
+  if (!n) return;
+  var id = D.cases[i].id || ('C' + Date.now());
+  D.cases[i].id = id;
+  var out = [];
+  for (var k = 1; k <= Number(n); k++) out.push('case-' + id + '-' + (k < 10 ? '0' + k : k) + '.jpg');
+  prompt('請把照片依序改成以下檔名，再上傳到 GitHub 的 assets 資料夾。\n（下面文字已選取，按 Ctrl+C 複製）', out.join('|'));
+  setPhotos(i, out.join('|'), null);
+  paint();
+}
+function addCase() {
+  D.cases.unshift({ id: 'C' + Date.now(), region: '台灣', title: '新案例', series: 'GA3600',
+    location: '', date: '', desc: '', cover: 0, photos: [], home: 0, show: 1 });
+  paintTabs(); paint(); toast('已新增，請編輯第一筆');
+}
+
+function viewCerts() {
+  var h = '<div class="bar"><div class="t">認證<span>共 ' + D.certs.length + ' 筆</span></div>' +
+    '<button class="btn" onclick="addCert()">＋ 新增認證</button></div>';
+  h += D.certs.map(function (c, i) {
+    return '<div class="row">' +
+      rowHead(c.category, true, c.title, '有效至 ' + (c.validUntil || '—'), c.show) +
+      '<div class="bd">' +
+      '<div class="f3">' + fld('認證名稱', 'certs.' + i + '.title') +
+        fld('分類', 'certs.' + i + '.category', '例：環保認證') +
+        fld('適用系列', 'certs.' + i + '.series') + '</div>' +
+      fld('說明', 'certs.' + i + '.desc', '', 'area') +
+      '<div class="f3">' + fld('有效期限', 'certs.' + i + '.validUntil', '過期會在網站上顯示紅字警示') +
+        fld('認證檔名', 'certs.' + i + '.file', '例：c-cri.pdf') +
+        fld('語音檔名', 'certs.' + i + '.audio') + '</div>' +
+      fld('Logo 檔名', 'certs.' + i + '.logo', '例：c-cri-logo.png') +
+      '<div class="chkline"><label><input type="checkbox"' + (c.show ? ' checked' : '') +
+        ' onchange="setb(\'certs.' + i + '.show\',this)">在網站上顯示</label></div>' +
+      '<div class="acts"><button class="btn sm" onclick="up(\'certs\',' + i + ')">↑ 上移</button>' +
+      '<button class="btn sm" onclick="down(\'certs\',' + i + ')">↓ 下移</button>' +
+      '<button class="btn sm dg" onclick="del(\'certs\',' + i + ',\'' + esc(c.title) + '\')">刪除</button></div>' +
+      '</div></div>';
+  }).join('');
+  return h;
+}
+function addCert() {
+  D.certs.push({ id: 'CT' + Date.now(), title: '新認證', category: '環保認證', desc: '',
+    validUntil: '', series: 'GA3600', file: '', audio: '', logo: '', show: 1 });
+  paintTabs(); paint();
+}
+
+function viewFaqs() {
+  var h = '<div class="note">這一頁是業務同仁最常看的地方。<b>把最常被問到的問題排在前面</b>，答案盡量寫得可以直接複製貼給客戶。</div>';
+  h += '<div class="bar"><div class="t">常見問答<span>共 ' + D.faqs.length + ' 筆</span></div>' +
+    '<button class="btn" onclick="addFaq()">＋ 新增問答</button></div>';
+  h += D.faqs.map(function (f, i) {
+    return '<div class="row">' +
+      rowHead(f.category, true, f.q, '', f.show) +
+      '<div class="bd">' +
+      '<div class="f2">' + fld('分類', 'faqs.' + i + '.category', '相同分類會歸在一起') +
+        fld('排序', 'faqs.' + i + '.sort', '數字小的排前面') + '</div>' +
+      fld('問題', 'faqs.' + i + '.q') +
+      fld('答案', 'faqs.' + i + '.a', '', 'area') +
+      '<div class="chkline"><label><input type="checkbox"' + (f.show ? ' checked' : '') +
+        ' onchange="setb(\'faqs.' + i + '.show\',this)">在網站上顯示</label></div>' +
+      '<div class="acts"><button class="btn sm" onclick="up(\'faqs\',' + i + ')">↑ 上移</button>' +
+      '<button class="btn sm" onclick="down(\'faqs\',' + i + ')">↓ 下移</button>' +
+      '<button class="btn sm dg" onclick="del(\'faqs\',' + i + ',\'' + esc(f.q) + '\')">刪除</button></div>' +
+      '</div></div>';
+  }).join('');
+  return h;
+}
+function addFaq() {
+  D.faqs.push({ id: 'F' + Date.now(), category: '產品', q: '新問題', a: '', sort: D.faqs.length + 1, show: 1 });
+  paintTabs(); paint();
+}
+
+function viewSite() {
+  var h = '<div class="bar"><div class="t">網站設定</div></div><div style="max-width:680px">';
+  h += fld('網站標題', 'site.title') + fld('副標', 'site.subtitle') +
+    fld('首頁大標', 'site.heroTitle') + fld('首頁說明', 'site.heroDesc', '', 'area') +
+    fld('庫存提示', 'site.stockNote', '顯示在首頁大標下方的紅框字') +
+    fld('聯絡資訊', 'site.contact') + fld('版權文字', 'site.copyright') + '</div>';
+  if (LIVE) {
+    h += '<div class="bar" style="margin-top:30px;border-top:1px solid var(--line)">' +
+      '<div class="t">安全設定</div></div><div style="max-width:380px">' +
+      '<div class="f"><label>新密碼</label><input id="npw" type="password">' +
+      '<div class="tip">建議 8 個字元以上，英數混合。連續輸錯 5 次會鎖定 10 分鐘。</div></div>' +
+      '<button class="btn" onclick="changePw()">變更密碼</button></div>';
+  }
+  return h;
+}
+function changePw() {
+  var n = $('npw').value;
+  if (!n || n.length < 4) { toast('新密碼至少 4 個字元', 1); return; }
+  post({ action: 'changePw', pw: PW, newPw: n }).then(function (r) {
+    if (r.ok) { PW = n; $('npw').value = ''; toast('密碼已變更'); }
+    else toast(r.error || '變更失敗', 1);
+  }).catch(function () { toast('連線失敗', 1); });
+}
+
+/* ---------------- 儲存 ---------------- */
+function save() {
+  D.cases.forEach(function (c) {
+    if (c.coverShow != null) { c.cover = Math.max(0, (Number(c.coverShow) || 1) - 1); delete c.coverShow; }
+  });
+  if (!LIVE) {
+    var b = new Blob([JSON.stringify(D, null, 1)], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(b); a.download = 'data.json';
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 3000);
+    toast('已下載 data.json，請上傳覆蓋 GitHub 上的同名檔案');
+    return;
+  }
+  toast('儲存中…');
+  post({ action: 'save', pw: PW, data: D }).then(function (r) {
+    if (r.ok) toast('已儲存，網站即時更新');
+    else toast(r.error || '儲存失敗', 1);
+  }).catch(function () { toast('連線失敗，請確認 API 網址', 1); });
+}
+
+initLocalPicker();
+
+/* 離開前提醒 */
+window.addEventListener('beforeunload', function (e) {
+  if (D) { e.preventDefault(); e.returnValue = ''; }
+});
+</script>
+</body>
+</html>

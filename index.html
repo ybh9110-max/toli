@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOLI地毯產品資料庫</title>
+<meta name="description" content="震旦家具／大震設計 TOLI 地毯 GA3600、GA400 系列產品資料、案例照片與認證文件查詢。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#C8161D; --red-dk:#A01016;
+  --ink:#1A1A1A; --sub:#767676; --faint:#9A9A9A;
+  --line:#E5E5E3; --bg:#FFFFFF; --bg2:#F7F7F5;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter','Noto Sans TC',-apple-system,"Microsoft JhengHei",sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.75;
+  -webkit-font-smoothing:antialiased;font-size:15px;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.brand img{height:26px;width:auto;object-fit:contain}
+.brand .sep{width:1px;height:22px;background:var(--line)}
+.brand b{font-size:15px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
+nav{display:flex;gap:2px}
+nav a{padding:8px 14px;font-size:14px;font-weight:500;color:var(--sub);
+  border-bottom:2px solid transparent;transition:.18s}
+nav a:hover{color:var(--ink)}
+nav a.on{color:var(--ink);border-bottom-color:var(--red)}
+.burger{display:none;font-size:22px;padding:6px 10px}
+
+/* ---------- 中英並列標題 ---------- */
+.sec-h{margin-bottom:38px}
+.sec-h .zh{display:block;font-size:26px;font-weight:700;letter-spacing:.06em;line-height:1.3}
+.sec-h .en{display:block;font-size:11px;font-weight:600;color:var(--faint);
+  letter-spacing:.22em;text-transform:uppercase;margin-top:5px}
+.sec-h.ctr{text-align:center}
+.sec-h .note{display:block;font-size:14px;color:var(--sub);margin-top:12px;font-weight:400;letter-spacing:0}
+
+section{padding:88px 0}
+section.alt{background:var(--bg2)}
+section.tight{padding:56px 0}
+
+/* ---------- Hero ---------- */
+.hero{padding:96px 0 72px;border-bottom:1px solid var(--line)}
+.hero .en-tag{font-size:11px;letter-spacing:.28em;color:var(--red);font-weight:600;margin-bottom:18px}
+.hero h1{font-size:44px;font-weight:700;letter-spacing:.04em;line-height:1.25}
+.hero p{color:var(--sub);margin-top:16px;font-size:16px;max-width:620px}
+.hero .stock{display:inline-block;margin-top:22px;font-size:13px;color:var(--red);
+  border:1px solid rgba(200,22,29,.3);border-radius:2px;padding:5px 12px;font-weight:500}
+
+/* ---------- 搜尋 ---------- */
+.searchbox{margin-top:38px;max-width:640px;position:relative}
+.searchbox input{width:100%;padding:16px 18px 16px 46px;font-size:15px;font-family:inherit;
+  border:1px solid var(--line);border-radius:2px;background:#fff;transition:.18s}
+.searchbox input:focus{outline:none;border-color:var(--ink)}
+.searchbox svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);
+  width:18px;height:18px;stroke:var(--faint)}
+.searchbox .hint{font-size:12.5px;color:var(--faint);margin-top:10px}
+.sr{margin-top:22px;border-top:1px solid var(--line)}
+.sr a{display:block;padding:14px 4px;border-bottom:1px solid var(--line);transition:.15s}
+.sr a:hover{background:var(--bg2)}
+.sr .tag{display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.1em;
+  color:#fff;background:var(--ink);padding:2px 7px;border-radius:2px;margin-right:10px;vertical-align:2px}
+.sr .tt{font-weight:500}
+.sr .ss{display:block;font-size:13px;color:var(--sub);margin-top:2px}
+.sr .none{padding:22px 4px;color:var(--sub);font-size:14px}
+
+/* ---------- 卡片格 ---------- */
+.grid{display:grid;gap:2px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.grid.sp{gap:28px}
+
+.card{background:#fff;border:1px solid var(--line);transition:.2s;overflow:hidden}
+.card:hover{border-color:var(--ink)}
+.card .ph{aspect-ratio:4/3;background:var(--bg2);overflow:hidden;position:relative}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover .ph img{transform:scale(1.045)}
+.card .ph .ct{position:absolute;top:0;left:0;font-size:10.5px;font-weight:600;letter-spacing:.1em;
+  background:var(--ink);color:#fff;padding:4px 9px}
+.card .bd{padding:20px}
+.card h3{font-size:16px;font-weight:700;letter-spacing:.02em}
+.card .meta{font-size:13px;color:var(--sub);margin-top:6px}
+.card .dsc{font-size:13.5px;color:var(--sub);margin-top:10px;line-height:1.7}
+
+/* ---------- 產品 ---------- */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--line);margin-bottom:44px}
+.tabs button{padding:14px 30px;font-size:15px;font-weight:500;color:var(--sub);
+  border-bottom:2px solid transparent;margin-bottom:-1px;transition:.18s}
+.tabs button.on{color:var(--ink);font-weight:700;border-bottom-color:var(--red)}
+
+.prod{border:1px solid var(--line);padding:30px;background:#fff;display:flex;
+  flex-direction:column;gap:14px}
+.prod .top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.prod .code{font-size:11px;font-weight:600;letter-spacing:.12em;color:#fff;
+  background:var(--red);padding:3px 9px}
+.prod h3{font-size:21px;font-weight:700;letter-spacing:.03em}
+.prod .dsc{color:var(--sub);font-size:14px}
+.prod .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:500;
+  padding:9px 16px;border:1px solid var(--line);transition:.18s;border-radius:2px}
+.btn:hover{border-color:var(--ink);background:var(--bg2)}
+.btn.pri{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.pri:hover{background:var(--red);border-color:var(--red)}
+.btn svg{width:15px;height:15px;stroke-width:1.8}
+.aud{margin-top:2px}
+.aud label{display:block;font-size:12px;color:var(--faint);letter-spacing:.08em;margin-bottom:6px}
+audio{width:100%;max-width:420px;height:38px}
+
+/* ---------- 篩選 ---------- */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px;align-items:center}
+.chip{font-size:13px;padding:7px 15px;border:1px solid var(--line);border-radius:2px;
+  transition:.18s;color:var(--sub)}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.fl{font-size:12px;color:var(--faint);letter-spacing:.1em;margin-right:4px}
+
+/* ---------- 案例明細 ---------- */
+.back{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--sub);margin-bottom:26px}
+.back:hover{color:var(--red)}
+.detail-hd{padding-bottom:26px;border-bottom:1px solid var(--line);margin-bottom:34px}
+.detail-hd h1{font-size:31px;font-weight:700;letter-spacing:.03em}
+.detail-hd .m{display:flex;gap:22px;flex-wrap:wrap;color:var(--sub);font-size:14px;margin-top:12px}
+.detail-hd .m b{color:var(--ink);font-weight:500}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.gal figure{position:relative;aspect-ratio:4/3;background:var(--bg2);overflow:hidden;cursor:zoom-in}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal .cc{position:absolute;left:0;bottom:0;font-size:10.5px;font-weight:600;letter-spacing:.08em;
+  background:rgba(26,26,26,.86);color:#fff;padding:4px 9px}
+
+/* ---------- 燈箱 ---------- */
+.lb{position:fixed;inset:0;z-index:300;background:rgba(20,20,20,.95);display:none;
+  align-items:center;justify-content:center;padding:40px}
+.lb.on{display:flex}
+.lb img{max-width:92vw;max-height:86vh;object-fit:contain}
+.lb .x{position:absolute;top:20px;right:26px;color:#fff;font-size:32px;line-height:1;opacity:.8}
+.lb .nv{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:36px;
+  padding:16px;opacity:.65;transition:.18s}
+.lb .nv:hover{opacity:1}
+.lb .pv{left:12px}.lb .nx{right:12px}
+.lb .cnt{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);
+  color:#fff;font-size:13px;letter-spacing:.1em;opacity:.75}
+
+/* ---------- 認證 ---------- */
+.cert{border:1px solid var(--line);padding:26px;display:flex;gap:22px;background:#fff}
+.cert .lg{width:76px;height:76px;flex-shrink:0;background:var(--bg2);
+  display:flex;align-items:center;justify-content:center;padding:9px}
+.cert .lg img{max-width:100%;max-height:100%;object-fit:contain}
+.cert h3{font-size:18px;font-weight:700;letter-spacing:.03em}
+.cert .cat{display:inline-block;font-size:11px;color:var(--sub);border:1px solid var(--line);
+  padding:2px 8px;margin-left:8px;vertical-align:3px;font-weight:400;letter-spacing:.05em}
+.cert .dsc{font-size:13.5px;color:var(--sub);margin-top:8px}
+.cert .exp{font-size:13px;margin-top:10px}
+.cert .exp.bad{color:var(--red);font-weight:500}
+
+/* ---------- FAQ ---------- */
+.faq-cat{font-size:11px;font-weight:600;letter-spacing:.18em;color:var(--red);
+  margin:38px 0 12px;text-transform:uppercase}
+.faq-cat:first-of-type{margin-top:0}
+.qa{border-bottom:1px solid var(--line)}
+.qa .q{width:100%;text-align:left;display:flex;justify-content:space-between;gap:18px;
+  padding:20px 2px;font-size:15.5px;font-weight:500;transition:.15s}
+.qa .q:hover{color:var(--red)}
+.qa .q i{font-style:normal;color:var(--faint);flex-shrink:0;transition:transform .25s;font-size:18px}
+.qa.open .q i{transform:rotate(45deg)}
+.qa .a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.qa.open .a{max-height:400px}
+.qa .a p{padding:0 2px 22px;color:var(--sub);font-size:14.5px;line-height:1.85}
+
+/* ---------- 首頁功能 ---------- */
+.feat{text-align:left;padding:30px;border:1px solid var(--line);background:#fff}
+.feat .n{font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--red)}
+.feat h3{font-size:17px;font-weight:700;margin-top:12px;letter-spacing:.02em}
+.feat p{font-size:13.5px;color:var(--sub);margin-top:9px;line-height:1.75}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--line);padding:56px 0 34px;background:var(--bg2);margin-top:20px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:44px}
+footer h4{font-size:11px;font-weight:600;letter-spacing:.18em;color:var(--faint);
+  margin-bottom:16px;text-transform:uppercase}
+footer .lk a{display:block;font-size:13.5px;color:var(--sub);padding:4px 0}
+footer .lk a:hover{color:var(--red)}
+footer .ct{font-size:13.5px;color:var(--sub);line-height:1.9}
+footer .logos{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+footer .logos img{height:24px;width:auto}
+.copy{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
+  font-size:12px;color:var(--faint);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.copy a{color:var(--faint)}
+.copy a:hover{color:var(--red)}
+
+.empty{padding:60px 0;text-align:center;color:var(--sub);font-size:14.5px}
+.loading{padding:90px 0;text-align:center;color:var(--faint);font-size:14px;letter-spacing:.1em}
+
+@media(max-width:900px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .fg{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:720px){
+  nav{position:fixed;top:74px;left:0;right:0;background:#fff;flex-direction:column;
+    border-bottom:1px solid var(--line);padding:8px 0;display:none;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+  nav.open{display:flex}
+  nav a{padding:13px 24px;border-bottom:0;border-left:2px solid transparent}
+  nav a.on{border-left-color:var(--red);border-bottom-color:transparent}
+  .burger{display:block}
+  .brand b{display:none}
+  .hero{padding:56px 0 46px}
+  .hero h1{font-size:30px}
+  section{padding:56px 0}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .sec-h .zh{font-size:22px}
+  .cert{flex-direction:column;gap:16px}
+  .detail-hd h1{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="#/">
+      <img src="assets/logo-aurora-furniture.jpg" alt="震旦家具" onerror="this.style.display='none'">
+      <img src="assets/logo-aurora-design.jpg" alt="大震設計" onerror="this.style.display='none'">
+      <span class="sep"></span>
+      <img src="assets/logo-toli.png" alt="TOLI" onerror="this.style.display='none'">
+      <b>TOLI地毯產品資料庫</b>
+    </a>
+    <button class="burger" id="burger" aria-label="選單">☰</button>
+    <nav id="nav">
+      <a href="#/">首頁</a>
+      <a href="#/faqs">常見Q&amp;A</a>
+      <a href="#/products">產品系列</a>
+      <a href="#/cases">案例照片</a>
+      <a href="#/certs">認證資料</a>
+    </nav>
+  </div>
+</header>
+
+<main id="app"><div class="loading">載入中…</div></main>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="logos">
+          <img src="assets/logo-aurora-furniture.jpg" alt="震旦家具" onerror="this.style.display='none'">
+          <img src="assets/logo-aurora-design.jpg" alt="大震設計" onerror="this.style.display='none'">
+          <img src="assets/logo-toli.png" alt="TOLI" onerror="this.style.display='none'">
+        </div>
+        <div class="ct" id="f-sub"></div>
+      </div>
+      <div>
+        <h4>Sitemap</h4>
+        <div class="lk">
+          <a href="#/products">產品系列</a>
+          <a href="#/cases">案例照片</a>
+          <a href="#/certs">認證資料</a>
+          <a href="#/faqs">常見Q&amp;A</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="ct" id="f-contact"></div>
+      </div>
+    </div>
+    <div class="copy">
+      <span id="f-copy"></span>
+      <a href="admin.html">管理後台</a>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb">
+  <button class="x" onclick="LB.close()">&times;</button>
+  <button class="nv pv" onclick="LB.go(-1)">&#8249;</button>
+  <img id="lb-img" src="" alt="">
+  <button class="nv nx" onclick="LB.go(1)">&#8250;</button>
+  <div class="cnt" id="lb-cnt"></div>
+</div>
+
+<script id="seed" type="application/json">
+{
+ "updated": "2026-08-02",
+ "site": {
+  "title": "TOLI地毯產品資料庫",
+  "subtitle": "日本TOLI地毯產品專業供應商",
+  "heroTitle": "日本進口TOLI地毯",
+  "heroSub": "Made in Japan",
+  "heroDesc": "GA3600 與 GA400 系列規格商品，專業高品質地毯解決方案",
+  "contact": "有任何問題請洽 採購部 許永斌 分機3323",
+  "copyright": "2026 震旦家具／大震設計 TOLI地毯產品網頁 版權所有",
+  "stockNote": "台灣無庫存 · 日本直送約 1 個月"
+ },
+ "products": [
+  {
+   "id": 1,
+   "series": "GA3600",
+   "subseries": "The Lake",
+   "name": "GA3600 The Lake",
+   "desc": "",
+   "pdf": "p-the-lake.pdf",
+   "audio": "p-the-lake.m4a",
+   "seriesAudio": "p-the-lake-series.m4a",
+   "youtube": "https://youtu.be/ibxSuJjdumk?si=euZul7Oh3NX7SQc2",
+   "show": 1
+  },
+  {
+   "id": 30001,
+   "series": "GA400",
+   "subseries": "GA400",
+   "name": "GA400",
+   "desc": "PP聚丙烯材質，素色無圖案",
+   "pdf": "p-ga400.pdf",
+   "audio": "p-ga400.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 90001,
+   "series": "GA3600",
+   "subseries": "The Ground",
+   "name": "GA3600 The Ground",
+   "desc": "",
+   "pdf": "p-the-ground.pdf",
+   "audio": "p-the-ground.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 120001,
+   "series": "GA3600",
+   "subseries": "The Bark",
+   "name": "GA3600 The Bark",
+   "desc": "",
+   "pdf": "p-the-bark.pdf",
+   "audio": "p-the-bark.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 150001,
+   "series": "GA400",
+   "subseries": "GA400S",
+   "name": "GA400S",
+   "desc": "",
+   "pdf": "p-ga400s.pdf",
+   "audio": "p-ga400s.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 150002,
+   "series": "GA400",
+   "subseries": "GA400RS",
+   "name": "GA400RS",
+   "desc": "",
+   "pdf": "p-ga400rs.pdf",
+   "audio": "p-ga400rs.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 150003,
+   "series": "GA400",
+   "subseries": "GA400A",
+   "name": "GA400A",
+   "desc": "",
+   "pdf": "p-ga400a.pdf",
+   "audio": "p-ga400a.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 180001,
+   "series": "GA3600",
+   "subseries": "Sustive Back",
+   "name": "Sustive Back",
+   "desc": "GA3600系列特有的環保背襯材質，提供優異的穩定性與耐用性",
+   "pdf": "p-sustive-back.pdf",
+   "audio": "p-sustive-back.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  }
+ ],
+ "cases": [
+  {
+   "id": 1,
+   "region": "台灣",
+   "title": "桃園機場第二航廈",
+   "series": "GA3600",
+   "location": "桃園機場第二航廈D區",
+   "date": "2025年11月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-1-01.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-02.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-03.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-04.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-05.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-06.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-07.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-08.jpg",
+     "code": "GA36306"
+    }
+   ],
+   "home": 1,
+   "show": 1
+  },
+  {
+   "id": 30001,
+   "region": "日本",
+   "title": "HBC北海道廣播",
+   "series": "GA3600",
+   "location": "北海道札幌",
+   "date": "2020年3月",
+   "desc": "辦公室",
+   "cover": 2,
+   "photos": [
+    {
+     "f": "case-30001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-30001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-30001-03.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60001,
+   "region": "日本",
+   "title": "Next Site千葉大廈",
+   "series": "GA3600",
+   "location": "",
+   "date": "2024年8月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-60001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60001-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60001-04.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60002,
+   "region": "日本",
+   "title": "富士技術開發中心富士辦公處",
+   "series": "GA3600",
+   "location": "",
+   "date": "2024年10月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-60002-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-06.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-07.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60003,
+   "region": "日本",
+   "title": "內藤建築事務所名古屋辦公室",
+   "series": "GA3600",
+   "location": "名古屋",
+   "date": "2024年7月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-60003-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60003-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60003-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60003-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60003-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60003-06.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60004,
+   "region": "日本",
+   "title": "Mirait株式會社關西分公司(大阪)",
+   "series": "GA3600",
+   "location": "大阪",
+   "date": "2021年12月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-60004-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60004-02.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60005,
+   "region": "日本",
+   "title": "新東京大廈",
+   "series": "GA3600",
+   "location": "東京",
+   "date": "",
+   "desc": "",
+   "cover": 2,
+   "photos": [
+    {
+     "f": "case-60005-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60005-02.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60006,
+   "region": "日本",
+   "title": "Kanden Realty & Development",
+   "series": "GA400",
+   "location": "",
+   "date": "",
+   "desc": "",
+   "cover": 1,
+   "photos": [
+    {
+     "f": "case-60006-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60006-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60006-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60006-04.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 90001,
+   "region": "日本",
+   "title": "KDDI",
+   "series": "GA3600",
+   "location": "東京",
+   "date": "2021年7月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-90001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-90001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-90001-03.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 120001,
+   "region": "日本",
+   "title": "三和行政總部大樓",
+   "series": "GA3600",
+   "location": "東京",
+   "date": "2025年8月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-120001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-120001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-120001-03.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 150001,
+   "region": "台灣",
+   "title": "震旦家具展廳",
+   "series": "GA3600",
+   "location": "台北市",
+   "date": "2024年11月",
+   "desc": "",
+   "cover": 6,
+   "photos": [
+    {
+     "f": "case-150001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-06.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-07.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-08.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-09.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-10.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 180001,
+   "region": "台灣",
+   "title": "力通國際",
+   "series": "GA3600",
+   "location": "新北市林口",
+   "date": "2025年10月",
+   "desc": "",
+   "cover": 4,
+   "photos": [
+    {
+     "f": "case-180001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-06.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-07.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 210001,
+   "region": "台灣",
+   "title": "巴斯夫",
+   "series": "GA3600",
+   "location": "台北市",
+   "date": "202508",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-210001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-06.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-07.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-08.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-09.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-10.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 240001,
+   "region": "台灣",
+   "title": "廣為科技",
+   "series": "GA3600",
+   "location": "新北市汐止",
+   "date": "202308",
+   "desc": "",
+   "cover": 2,
+   "photos": [
+    {
+     "f": "case-240001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-240001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-240001-03.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 270001,
+   "region": "日本",
+   "title": "LAWSON",
+   "series": "GA3600",
+   "location": "",
+   "date": "",
+   "desc": "The Ground-Lattice Valley",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-270001-01.jpg",
+     "code": "GA36505"
+    },
+    {
+     "f": "case-270001-02.jpg",
+     "code": "GA36501"
+    },
+    {
+     "f": "case-270001-03.jpg",
+     "code": "GA36501"
+    },
+    {
+     "f": "case-270001-04.jpg",
+     "code": "GA36504/GA36506"
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 270002,
+   "region": "日本",
+   "title": "日本案例",
+   "series": "GA3600",
+   "location": "",
+   "date": "",
+   "desc": "The Bark-Layered Birch",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-270002-01.jpg",
+     "code": "GA3682"
+    },
+    {
+     "f": "case-270002-02.jpg",
+     "code": "GA3684"
+    },
+    {
+     "f": "case-270002-03.jpg",
+     "code": "GA3685/GA3687"
+    },
+    {
+     "f": "case-270002-04.jpg",
+     "code": "GA3682/GA3683"
+    },
+    {
+     "f": "case-270002-05.jpg",
+     "code": "GA3682"
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 270003,
+   "region": "日本",
+   "title": "日本案例",
+   "series": "GA3600",
+   "location": "",
+   "date": "",
+   "desc": "The Lake-Shine Rhombus Ⅱ",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-270003-01.jpg",
+     "code": "GA36703"
+    },
+    {
+     "f": "case-270003-02.jpg",
+     "code": "GA36701"
+    },
+    {
+     "f": "case-270003-03.jpg",
+     "code": "GA36705"
+    },
+    {
+     "f": "case-270003-04.jpg",
+     "code": "GA36706"
+    },
+    {
+     "f": "case-270003-05.jpg",
+     "code": "GA36706"
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 300001,
+   "region": "台灣",
+   "title": "艾特電",
+   "series": "GA3600、GA400",
+   "location": "桃園",
+   "date": "202602",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-300001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-06.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-07.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-08.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-09.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-10.jpg",
+     "code": ""
+    }
+   ],
+   "home": 1,
+   "show": 1
+  }
+ ],
+ "certs": [
+  {
+   "id": 1,
+   "title": "CRI",
+   "category": "環保認證",
+   "desc": "美國地毯協會CRI發佈的Green Label Plus認證",
+   "validUntil": "20260331",
+   "series": "GA3600",
+   "file": "c-cri.pdf",
+   "audio": "c-cri.m4a",
+   "logo": "c-cri-logo.png",
+   "show": 1
+  },
+  {
+   "id": 30001,
+   "title": "ECO LEAF認證",
+   "category": "環保認證",
+   "desc": "",
+   "validUntil": "2023年12月31日",
+   "series": "GA3600",
+   "file": "c-eco-leaf.pdf",
+   "audio": "c-eco-leaf.m4a",
+   "logo": "c-eco-leaf-logo.png",
+   "show": 1
+  },
+  {
+   "id": 30002,
+   "title": "ECO MARK",
+   "category": "永續再生認證",
+   "desc": "",
+   "validUntil": "2027年12月31日",
+   "series": "GA3600",
+   "file": "c-eco-mark.pdf",
+   "audio": "c-eco-mark.m4a",
+   "logo": "c-eco-mark-logo.jpg",
+   "show": 1
+  },
+  {
+   "id": 60001,
+   "title": "EPD",
+   "category": "環保認證",
+   "desc": "",
+   "validUntil": "2027年4月21日",
+   "series": "GA3600",
+   "file": "c-epd.pdf",
+   "audio": "c-epd.m4a",
+   "logo": "",
+   "show": 1
+  }
+ ],
+ "faqs": [
+  {
+   "id": 30001,
+   "category": "庫存",
+   "q": "TOLI地毯有現貨嗎？",
+   "a": "TOLI全商品在台灣都沒有庫存，全部都是下單後從日本船運到台灣。",
+   "sort": 1,
+   "show": 1
+  },
+  {
+   "id": 30002,
+   "category": "交期",
+   "q": "TOLI地毯交期要多久？",
+   "a": "通常營業同仁下單後大約1個月可以運抵台灣。",
+   "sort": 2,
+   "show": 1
+  },
+  {
+   "id": 60001,
+   "category": "產品",
+   "q": "TOLI官網上的產品都可以銷售嗎？",
+   "a": "官網裡的所有產品都可以個案進口，詳情可以詢問採購部許永斌或英邦窗口洪先生",
+   "sort": 2,
+   "show": 1
+  }
+ ]
+}
+</script>
+
+<script>
+/* ==========================================================
+   設定
+   ========================================================== */
+var CONFIG = {
+  // 部署好 Google Apps Script 後，把網址填在這裡，資料就會改從後台即時讀取。
+  // 留空 = 讀取同資料夾的 data.json
+  API_URL: '',
+  ASSETS: 'assets/'
+};
+
+/* ==========================================================
+   工具
+   ========================================================== */
+var DB = null;
+var A = function (f) { return f ? CONFIG.ASSETS + f : ''; };
+var esc = function (s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+};
+var $ = function (id) { return document.getElementById(id); };
+
+var ICON = {
+  pdf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>',
+  play: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>',
+  yt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10 9 15 12 10 15 10 9"/></svg>',
+  search: '<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>'
+};
+
+function heading(zh, en, note) {
+  return '<div class="sec-h"><span class="zh">' + zh + '</span><span class="en">' + en + '</span>' +
+    (note ? '<span class="note">' + note + '</span>' : '') + '</div>';
+}
+function headingC(zh, en, note) {
+  return heading(zh, en, note).replace('sec-h', 'sec-h ctr');
+}
+
+/* ==========================================================
+   燈箱
+   ========================================================== */
+var LB = {
+  list: [], i: 0,
+  open: function (list, i) {
+    this.list = list; this.i = i;
+    $('lb').classList.add('on'); this.paint();
+    document.body.style.overflow = 'hidden';
+  },
+  close: function () { $('lb').classList.remove('on'); document.body.style.overflow = ''; },
+  go: function (d) { this.i = (this.i + d + this.list.length) % this.list.length; this.paint(); },
+  paint: function () {
+    $('lb-img').src = A(this.list[this.i].f);
+    var c = this.list[this.i].code;
+    $('lb-cnt').textContent = (this.i + 1) + ' / ' + this.list.length + (c ? '　色號 ' + c : '');
+  }
+};
+$('lb').addEventListener('click', function (e) { if (e.target === this) LB.close(); });
+document.addEventListener('keydown', function (e) {
+  if (!$('lb').classList.contains('on')) return;
+  if (e.key === 'Escape') LB.close();
+  if (e.key === 'ArrowLeft') LB.go(-1);
+  if (e.key === 'ArrowRight') LB.go(1);
+});
+
+/* ==========================================================
+   搜尋
+   ========================================================== */
+function buildIndex() {
+  var ix = [];
+  DB.products.filter(function (p) { return p.show; }).forEach(function (p) {
+    ix.push({ t: '產品', title: p.name, sub: p.series + ' 系列' + (p.desc ? '　' + p.desc : ''),
+      href: '#/products?s=' + p.series, key: [p.name, p.series, p.subseries, p.desc].join(' ') });
+  });
+  DB.cases.filter(function (c) { return c.show; }).forEach(function (c) {
+    var codes = c.photos.map(function (x) { return x.code; }).filter(Boolean);
+    var uniq = codes.filter(function (v, i) { return codes.indexOf(v) === i; });
+    ix.push({ t: '案例', title: c.title,
+      sub: [c.region, c.location, c.date, c.series].filter(Boolean).join('　') + (uniq.length ? '　色號 ' + uniq.join('、') : ''),
+      href: '#/cases/' + c.id, key: [c.title, c.location, c.region, c.series, c.date, uniq.join(' ')].join(' ') });
+  });
+  DB.certs.filter(function (c) { return c.show; }).forEach(function (c) {
+    ix.push({ t: '認證', title: c.title, sub: c.category + '　適用 ' + c.series + '　有效至 ' + c.validUntil,
+      href: '#/certs', key: [c.title, c.category, c.desc, c.series].join(' ') });
+  });
+  DB.faqs.filter(function (f) { return f.show; }).forEach(function (f) {
+    ix.push({ t: '問答', title: f.q, sub: f.a, href: '#/faqs', key: [f.q, f.a, f.category].join(' ') });
+  });
+  return ix;
+}
+
+function runSearch(q) {
+  var box = $('sr'); if (!box) return;
+  q = q.trim().toLowerCase();
+  if (q.length < 1) { box.innerHTML = ''; return; }
+  var hits = buildIndex().filter(function (r) { return r.key.toLowerCase().indexOf(q) >= 0; }).slice(0, 12);
+  if (!hits.length) { box.innerHTML = '<div class="none">找不到「' + esc(q) + '」相關內容。可以試試品號、色號、案名或關鍵字。</div>'; return; }
+  box.innerHTML = hits.map(function (r) {
+    return '<a href="' + r.href + '"><span class="tag">' + r.t + '</span><span class="tt">' +
+      esc(r.title) + '</span><span class="ss">' + esc(r.sub) + '</span></a>';
+  }).join('');
+}
+
+/* ==========================================================
+   頁面
+   ========================================================== */
+function pageHome() {
+  var s = DB.site;
+  var feats = DB.cases.filter(function (c) { return c.show && c.home; });
+  if (!feats.length) feats = DB.cases.filter(function (c) { return c.show; }).slice(0, 3);
+  feats = feats.slice(0, 3);
+
+  var seriesCards = [
+    { code: 'GA3600', zh: '高品質商用地毯', d: '專為高端商業空間設計的高耐用性地毯，含 The Lake、The Ground、The Bark 三大設計主題與 Sustive Back 環保背襯。' },
+    { code: 'GA400', zh: '多樣化產品選擇', d: 'GA400、GA400A、GA400S、GA400RS 四大子系列，PP 聚丙烯材質，提供更多元的規格組合與應用場景。' }
+  ].map(function (x) {
+    return '<a class="card" href="#/products?s=' + x.code + '"><div class="bd">' +
+      '<div class="prod"><div class="top"><span class="code">' + x.code + '</span></div>' +
+      '<h3>' + x.zh + '</h3><p class="dsc">' + x.d + '</p>' +
+      '<div class="acts"><span class="btn pri">查看詳情</span></div></div></div></a>';
+  }).join('');
+
+  var caseCards = feats.map(caseCard).join('');
+
+  var featBlocks = [
+    { n: '01', h: '產品規格 PDF', p: '每個系列的完整規格文件，客戶問規格時直接傳連結給對方。' },
+    { n: '02', h: '設計理念語音檔', p: '開車去客戶端的路上就能聽完，快速掌握每個花色的設計故事。' },
+    { n: '03', h: '案例照片與色號', p: '96 張實際完工照片，每張都標註使用色號，提案時最有說服力。' },
+    { n: '04', h: '國際認證文件', p: 'CRI、ECO MARK、EPD 等認證，綠建築標案需要時直接下載。' }
+  ].map(function (f) {
+    return '<div class="feat"><div class="n">' + f.n + '</div><h3>' + f.h + '</h3><p>' + f.p + '</p></div>';
+  }).join('');
+
+  return '' +
+  '<div class="hero"><div class="wrap">' +
+    '<div class="en-tag">MADE IN JAPAN</div>' +
+    '<h1>' + esc(s.heroTitle) + '</h1>' +
+    '<p>' + esc(s.heroDesc) + '</p>' +
+    '<div class="stock">' + esc(s.stockNote) + '</div>' +
+    '<div class="searchbox">' + ICON.search +
+      '<input id="q" type="search" placeholder="搜尋產品、色號、案例、常見問題…" autocomplete="off">' +
+      '<div class="hint">試試「GA36306」「桃園機場」「交期」「The Lake」</div>' +
+      '<div class="sr" id="sr"></div>' +
+    '</div>' +
+  '</div></div>' +
+
+  '<section><div class="wrap">' + heading('產品系列', 'Item Lineup', '兩大主力規格商品，滿足不同商業空間需求') +
+    '<div class="grid g2 sp">' + seriesCards + '</div>' +
+  '</div></section>' +
+
+  '<section class="alt"><div class="wrap">' + heading('精選案例', 'Case Study', '探索 TOLI 地毯在各類商業空間的實際應用') +
+    '<div class="grid g3 sp">' + caseCards + '</div>' +
+    '<div style="margin-top:34px"><a class="btn" href="#/cases">查看全部 ' +
+      DB.cases.filter(function (c) { return c.show; }).length + ' 個案例</a></div>' +
+  '</div></section>' +
+
+  '<section><div class="wrap">' + heading('資料庫內容', 'What You Can Find', '') +
+    '<div class="grid g4 sp">' + featBlocks + '</div>' +
+  '</div></section>';
+}
+
+function caseCard(c) {
+  var cover = c.photos[c.cover] || c.photos[0];
+  return '<a class="card" href="#/cases/' + c.id + '">' +
+    '<div class="ph"><span class="ct">' + esc(c.region) + '</span>' +
+    (cover ? '<img loading="lazy" src="' + A(cover.f) + '" alt="' + esc(c.title) + '">' : '') + '</div>' +
+    '<div class="bd"><h3>' + esc(c.title) + '</h3><div class="meta">' +
+    [c.series, c.location, c.date].filter(Boolean).map(esc).join('　·　') + '</div>' +
+    '<div class="meta" style="margin-top:8px;font-size:12px;color:var(--faint)">' +
+    c.photos.length + ' 張照片</div></div></a>';
+}
+
+function pageProducts(qs) {
+  var want = (qs && qs.s) || 'GA3600';
+  var list = DB.products.filter(function (p) { return p.show && p.series === want; });
+  var tabs = ['GA3600', 'GA400'].map(function (s) {
+    return '<button class="' + (s === want ? 'on' : '') + '" onclick="location.hash=\'#/products?s=' + s + '\'">' + s + ' 系列</button>';
+  }).join('');
+
+  var items = list.map(function (p) {
+    var acts = '';
+    if (p.pdf) acts += '<a class="btn pri" href="' + A(p.pdf) + '" target="_blank" rel="noopener">' + ICON.pdf + '產品規格 PDF</a>';
+    if (p.youtube) acts += '<a class="btn" href="' + esc(p.youtube) + '" target="_blank" rel="noopener">' + ICON.yt + '系列影片</a>';
+    var aud = '';
+    if (p.audio) aud += '<div class="aud"><label>設計理念語音</label><audio controls preload="none" src="' + A(p.audio) + '"></audio></div>';
+    if (p.seriesAudio) aud += '<div class="aud"><label>系列介紹語音</label><audio controls preload="none" src="' + A(p.seriesAudio) + '"></audio></div>';
+    return '<div class="prod"><div class="top"><span class="code">' + esc(p.series) + '</span>' +
+      '<h3>' + esc(p.subseries) + '</h3></div>' +
+      (p.desc ? '<p class="dsc">' + esc(p.desc) + '</p>' : '') +
+      (acts ? '<div class="acts">' + acts + '</div>' : '') + aud + '</div>';
+  }).join('');
+
+  return '<section class="tight"><div class="wrap">' +
+    heading('產品系列', 'Item Lineup', '本公司引進之 TOLI 規格商品：' + DB.site.stockNote) +
+    '<div class="tabs">' + tabs + '</div>' +
+    (items ? '<div class="grid g2 sp">' + items + '</div>' : '<div class="empty">此系列尚無資料</div>') +
+  '</div></section>';
+}
+
+function pageCases(qs) {
+  var all = DB.cases.filter(function (c) { return c.show; });
+  var region = (qs && qs.r) || '';
+  var code = (qs && qs.c) || '';
+
+  var codes = [];
+  all.forEach(function (c) {
+    c.photos.forEach(function (p) { if (p.code && codes.indexOf(p.code) < 0) codes.push(p.code); });
+  });
+  codes.sort();
+
+  var list = all.filter(function (c) {
+    if (region && c.region !== region) return false;
+    if (code && !c.photos.some(function (p) { return p.code === code; })) return false;
+    return true;
+  });
+
+  function chip(label, key, val, cur) {
+    var q = { r: region, c: code }; q[key] = val;
+    var h = '#/cases' + (q.r || q.c ? '?' + (q.r ? 'r=' + encodeURIComponent(q.r) : '') +
+      (q.r && q.c ? '&' : '') + (q.c ? 'c=' + encodeURIComponent(q.c) : '') : '');
+    return '<a class="chip ' + (cur === val ? 'on' : '') + '" href="' + h + '">' + esc(label) + '</a>';
+  }
+
+  var f1 = '<span class="fl">地區</span>' + chip('全部', 'r', '', region) +
+    chip('台灣 ' + all.filter(function (c) { return c.region === '台灣'; }).length, 'r', '台灣', region) +
+    chip('日本 ' + all.filter(function (c) { return c.region === '日本'; }).length, 'r', '日本', region);
+  var f2 = '<span class="fl">色號</span>' + chip('全部', 'c', '', code) +
+    codes.map(function (x) { return chip(x, 'c', x, code); }).join('');
+
+  return '<section class="tight"><div class="wrap">' +
+    heading('案例照片', 'Case Study', '共 ' + all.length + ' 個案例、' +
+      all.reduce(function (a, c) { return a + c.photos.length; }, 0) + ' 張實際完工照片') +
+    '<div class="filters">' + f1 + '</div>' +
+    '<div class="filters">' + f2 + '</div>' +
+    (list.length ? '<div class="grid g3 sp">' + list.map(caseCard).join('') + '</div>'
+                 : '<div class="empty">沒有符合條件的案例</div>') +
+  '</div></section>';
+}
+
+function pageCaseDetail(id) {
+  var c = DB.cases.filter(function (x) { return String(x.id) === String(id); })[0];
+  if (!c) return '<section><div class="wrap"><div class="empty">找不到此案例</div></div></section>';
+  window.__gal = c.photos;
+  var g = c.photos.map(function (p, i) {
+    return '<figure onclick="LB.open(window.__gal,' + i + ')">' +
+      '<img loading="lazy" src="' + A(p.f) + '" alt="' + esc(c.title) + ' ' + (i + 1) + '">' +
+      (p.code ? '<span class="cc">' + esc(p.code) + '</span>' : '') + '</figure>';
+  }).join('');
+
+  var meta = [['地區', c.region], ['系列', c.series], ['地點', c.location], ['日期', c.date]]
+    .filter(function (x) { return x[1]; })
+    .map(function (x) { return '<span>' + x[0] + '　<b>' + esc(x[1]) + '</b></span>'; }).join('');
+
+  return '<section class="tight"><div class="wrap">' +
+    '<a class="back" href="#/cases">&#8249; 返回案例列表</a>' +
+    '<div class="detail-hd"><h1>' + esc(c.title) + '</h1>' +
+    '<div class="m">' + meta + '<span>照片　<b>' + c.photos.length + ' 張</b></span></div>' +
+    (c.desc ? '<p style="margin-top:14px;color:var(--sub)">' + esc(c.desc) + '</p>' : '') + '</div>' +
+    '<div class="gal">' + g + '</div>' +
+  '</div></section>';
+}
+
+function pageCerts() {
+  var list = DB.certs.filter(function (c) { return c.show; });
+  var today = new Date();
+  var items = list.map(function (c) {
+    var expired = false, d = String(c.validUntil || '');
+    var m = d.match(/(\d{4})\D*(\d{1,2})\D*(\d{1,2})/);
+    if (m) expired = new Date(+m[1], +m[2] - 1, +m[3]) < today;
+    var acts = '';
+    if (c.file) acts += '<a class="btn pri" href="' + A(c.file) + '" target="_blank" rel="noopener">' + ICON.pdf + '認證文件</a>';
+    return '<div class="cert">' +
+      '<div class="lg">' + (c.logo ? '<img src="' + A(c.logo) + '" alt="' + esc(c.title) + '">' : '') + '</div>' +
+      '<div style="flex:1">' +
+      '<h3>' + esc(c.title) + '<span class="cat">' + esc(c.category) + '</span></h3>' +
+      (c.desc ? '<p class="dsc">' + esc(c.desc) + '</p>' : '') +
+      '<div class="exp' + (expired ? ' bad' : '') + '">有效期限：' + esc(c.validUntil) +
+        (expired ? '（已過期，請洽採購部確認最新版本）' : '') + '</div>' +
+      '<div class="exp" style="color:var(--sub)">適用系列：' + esc(c.series) + '</div>' +
+      (acts ? '<div class="acts" style="margin-top:14px">' + acts + '</div>' : '') +
+      (c.audio ? '<div class="aud" style="margin-top:12px"><label>認證重點語音</label>' +
+        '<audio controls preload="none" src="' + A(c.audio) + '"></audio></div>' : '') +
+      '</div></div>';
+  }).join('');
+
+  return '<section class="tight"><div class="wrap">' +
+    heading('認證資料', 'Certifications', 'TOLI 地毯通過多項國際認證，綠建築標案可直接下載使用') +
+    (items ? '<div class="grid g2 sp">' + items + '</div>' : '<div class="empty">尚無認證資料</div>') +
+  '</div></section>';
+}
+
+function pageFaqs() {
+  var list = DB.faqs.filter(function (f) { return f.show; })
+    .sort(function (a, b) { return (a.sort || 0) - (b.sort || 0); });
+  var cats = [];
+  list.forEach(function (f) { if (cats.indexOf(f.category) < 0) cats.push(f.category); });
+
+  var html = cats.map(function (cat) {
+    var qs = list.filter(function (f) { return f.category === cat; }).map(function (f) {
+      return '<div class="qa"><button class="q" onclick="this.parentNode.classList.toggle(\'open\')">' +
+        '<span>' + esc(f.q) + '</span><i>+</i></button>' +
+        '<div class="a"><p>' + esc(f.a) + '</p></div></div>';
+    }).join('');
+    return '<div class="faq-cat">' + esc(cat) + '</div>' + qs;
+  }).join('');
+
+  return '<section class="tight"><div class="wrap" style="max-width:820px">' +
+    heading('常見Q&amp;A', 'FAQ', '業務同仁最常被客戶問到的問題，先在這裡找答案') +
+    (html || '<div class="empty">尚無資料</div>') +
+    '<div style="margin-top:44px;padding:22px;background:var(--bg2);font-size:14px;color:var(--sub)">' +
+    '找不到答案？' + esc(DB.site.contact) + '</div>' +
+  '</div></section>';
+}
+
+/* ==========================================================
+   路由
+   ========================================================== */
+function parseHash() {
+  var h = location.hash.replace(/^#/, '') || '/';
+  var parts = h.split('?');
+  var path = parts[0];
+  var qs = {};
+  (parts[1] || '').split('&').forEach(function (kv) {
+    if (!kv) return;
+    var a = kv.split('=');
+    qs[decodeURIComponent(a[0])] = decodeURIComponent(a[1] || '');
+  });
+  return { path: path, qs: qs };
+}
+
+function render() {
+  var r = parseHash(), p = r.path, html;
+  if (p === '/' || p === '') html = pageHome();
+  else if (p === '/products') html = pageProducts(r.qs);
+  else if (p === '/cases') html = pageCases(r.qs);
+  else if (p.indexOf('/cases/') === 0) html = pageCaseDetail(p.split('/')[2]);
+  else if (p === '/certs') html = pageCerts();
+  else if (p === '/faqs') html = pageFaqs();
+  else html = '<section><div class="wrap"><div class="empty">找不到頁面</div></div></section>';
+
+  $('app').innerHTML = html;
+  window.scrollTo(0, 0);
+  $('nav').classList.remove('open');
+
+  var base = '#' + (p.indexOf('/cases') === 0 ? '/cases' : p.split('?')[0]);
+  [].forEach.call(document.querySelectorAll('nav a'), function (a) {
+    a.classList.toggle('on', a.getAttribute('href') === base);
+  });
+
+  var q = $('q');
+  if (q) { q.addEventListener('input', function () { runSearch(this.value); }); }
+}
+
+$('burger').onclick = function () { $('nav').classList.toggle('open'); };
+window.addEventListener('hashchange', render);
+
+/* ==========================================================
+   啟動
+   ========================================================== */
+function boot(data) {
+  DB = data;
+  $('f-sub').textContent = DB.site.subtitle;
+  $('f-contact').textContent = DB.site.contact;
+  $('f-copy').textContent = '© ' + DB.site.copyright;
+  document.title = DB.site.title;
+  render();
+}
+
+function seedData() {
+  try { return JSON.parse($('seed').textContent); } catch (e) { return null; }
+}
+
+(function () {
+  // 讀取順序：後台 API → data.json → 內嵌備援資料
+  var chain = [];
+  if (CONFIG.API_URL) chain.push(CONFIG.API_URL + '?action=read');
+  chain.push('data.json');
+
+  (function next(i) {
+    if (i >= chain.length) {
+      var s = seedData();
+      if (s) { boot(s); } else { $('app').innerHTML = '<div class="loading">資料載入失敗</div>'; }
+      return;
+    }
+    fetch(chain[i])
+      .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .then(function (d) { if (!d || !d.products) throw 0; boot(d); })
+      .catch(function () { next(i + 1); });
+  })(0);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,825 @@
+{
+ "updated": "2026-08-02",
+ "site": {
+  "title": "TOLI地毯產品資料庫",
+  "subtitle": "日本TOLI地毯產品專業供應商",
+  "heroTitle": "日本進口TOLI地毯",
+  "heroSub": "Made in Japan",
+  "heroDesc": "GA3600 與 GA400 系列規格商品，專業高品質地毯解決方案",
+  "contact": "有任何問題請洽 採購部 許永斌 分機3323",
+  "copyright": "2026 震旦家具／大震設計 TOLI地毯產品網頁 版權所有",
+  "stockNote": "台灣無庫存 · 日本直送約 1 個月"
+ },
+ "products": [
+  {
+   "id": 1,
+   "series": "GA3600",
+   "subseries": "The Lake",
+   "name": "GA3600 The Lake",
+   "desc": "",
+   "pdf": "p-the-lake.pdf",
+   "audio": "p-the-lake.m4a",
+   "seriesAudio": "p-the-lake-series.m4a",
+   "youtube": "https://youtu.be/ibxSuJjdumk?si=euZul7Oh3NX7SQc2",
+   "show": 1
+  },
+  {
+   "id": 30001,
+   "series": "GA400",
+   "subseries": "GA400",
+   "name": "GA400",
+   "desc": "PP聚丙烯材質，素色無圖案",
+   "pdf": "p-ga400.pdf",
+   "audio": "p-ga400.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 90001,
+   "series": "GA3600",
+   "subseries": "The Ground",
+   "name": "GA3600 The Ground",
+   "desc": "",
+   "pdf": "p-the-ground.pdf",
+   "audio": "p-the-ground.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 120001,
+   "series": "GA3600",
+   "subseries": "The Bark",
+   "name": "GA3600 The Bark",
+   "desc": "",
+   "pdf": "p-the-bark.pdf",
+   "audio": "p-the-bark.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 150001,
+   "series": "GA400",
+   "subseries": "GA400S",
+   "name": "GA400S",
+   "desc": "",
+   "pdf": "p-ga400s.pdf",
+   "audio": "p-ga400s.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 150002,
+   "series": "GA400",
+   "subseries": "GA400RS",
+   "name": "GA400RS",
+   "desc": "",
+   "pdf": "p-ga400rs.pdf",
+   "audio": "p-ga400rs.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 150003,
+   "series": "GA400",
+   "subseries": "GA400A",
+   "name": "GA400A",
+   "desc": "",
+   "pdf": "p-ga400a.pdf",
+   "audio": "p-ga400a.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 180001,
+   "series": "GA3600",
+   "subseries": "Sustive Back",
+   "name": "Sustive Back",
+   "desc": "GA3600系列特有的環保背襯材質，提供優異的穩定性與耐用性",
+   "pdf": "p-sustive-back.pdf",
+   "audio": "p-sustive-back.m4a",
+   "seriesAudio": "",
+   "youtube": "",
+   "show": 1
+  }
+ ],
+ "cases": [
+  {
+   "id": 1,
+   "region": "台灣",
+   "title": "桃園機場第二航廈",
+   "series": "GA3600",
+   "location": "桃園機場第二航廈D區",
+   "date": "2025年11月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-1-01.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-02.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-03.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-04.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-05.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-06.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-07.jpg",
+     "code": "GA36306"
+    },
+    {
+     "f": "case-1-08.jpg",
+     "code": "GA36306"
+    }
+   ],
+   "home": 1,
+   "show": 1
+  },
+  {
+   "id": 30001,
+   "region": "日本",
+   "title": "HBC北海道廣播",
+   "series": "GA3600",
+   "location": "北海道札幌",
+   "date": "2020年3月",
+   "desc": "辦公室",
+   "cover": 2,
+   "photos": [
+    {
+     "f": "case-30001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-30001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-30001-03.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60001,
+   "region": "日本",
+   "title": "Next Site千葉大廈",
+   "series": "GA3600",
+   "location": "",
+   "date": "2024年8月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-60001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60001-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60001-04.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60002,
+   "region": "日本",
+   "title": "富士技術開發中心富士辦公處",
+   "series": "GA3600",
+   "location": "",
+   "date": "2024年10月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-60002-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-06.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60002-07.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60003,
+   "region": "日本",
+   "title": "內藤建築事務所名古屋辦公室",
+   "series": "GA3600",
+   "location": "名古屋",
+   "date": "2024年7月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-60003-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60003-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60003-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60003-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60003-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60003-06.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60004,
+   "region": "日本",
+   "title": "Mirait株式會社關西分公司(大阪)",
+   "series": "GA3600",
+   "location": "大阪",
+   "date": "2021年12月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-60004-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60004-02.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60005,
+   "region": "日本",
+   "title": "新東京大廈",
+   "series": "GA3600",
+   "location": "東京",
+   "date": "",
+   "desc": "",
+   "cover": 2,
+   "photos": [
+    {
+     "f": "case-60005-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60005-02.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 60006,
+   "region": "日本",
+   "title": "Kanden Realty & Development",
+   "series": "GA400",
+   "location": "",
+   "date": "",
+   "desc": "",
+   "cover": 1,
+   "photos": [
+    {
+     "f": "case-60006-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60006-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60006-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-60006-04.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 90001,
+   "region": "日本",
+   "title": "KDDI",
+   "series": "GA3600",
+   "location": "東京",
+   "date": "2021年7月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-90001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-90001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-90001-03.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 120001,
+   "region": "日本",
+   "title": "三和行政總部大樓",
+   "series": "GA3600",
+   "location": "東京",
+   "date": "2025年8月",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-120001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-120001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-120001-03.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 150001,
+   "region": "台灣",
+   "title": "震旦家具展廳",
+   "series": "GA3600",
+   "location": "台北市",
+   "date": "2024年11月",
+   "desc": "",
+   "cover": 6,
+   "photos": [
+    {
+     "f": "case-150001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-06.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-07.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-08.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-09.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-150001-10.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 180001,
+   "region": "台灣",
+   "title": "力通國際",
+   "series": "GA3600",
+   "location": "新北市林口",
+   "date": "2025年10月",
+   "desc": "",
+   "cover": 4,
+   "photos": [
+    {
+     "f": "case-180001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-06.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-180001-07.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 210001,
+   "region": "台灣",
+   "title": "巴斯夫",
+   "series": "GA3600",
+   "location": "台北市",
+   "date": "202508",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-210001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-06.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-07.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-08.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-09.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-210001-10.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 240001,
+   "region": "台灣",
+   "title": "廣為科技",
+   "series": "GA3600",
+   "location": "新北市汐止",
+   "date": "202308",
+   "desc": "",
+   "cover": 2,
+   "photos": [
+    {
+     "f": "case-240001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-240001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-240001-03.jpg",
+     "code": ""
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 270001,
+   "region": "日本",
+   "title": "LAWSON",
+   "series": "GA3600",
+   "location": "",
+   "date": "",
+   "desc": "The Ground-Lattice Valley",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-270001-01.jpg",
+     "code": "GA36505"
+    },
+    {
+     "f": "case-270001-02.jpg",
+     "code": "GA36501"
+    },
+    {
+     "f": "case-270001-03.jpg",
+     "code": "GA36501"
+    },
+    {
+     "f": "case-270001-04.jpg",
+     "code": "GA36504/GA36506"
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 270002,
+   "region": "日本",
+   "title": "日本案例",
+   "series": "GA3600",
+   "location": "",
+   "date": "",
+   "desc": "The Bark-Layered Birch",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-270002-01.jpg",
+     "code": "GA3682"
+    },
+    {
+     "f": "case-270002-02.jpg",
+     "code": "GA3684"
+    },
+    {
+     "f": "case-270002-03.jpg",
+     "code": "GA3685/GA3687"
+    },
+    {
+     "f": "case-270002-04.jpg",
+     "code": "GA3682/GA3683"
+    },
+    {
+     "f": "case-270002-05.jpg",
+     "code": "GA3682"
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 270003,
+   "region": "日本",
+   "title": "日本案例",
+   "series": "GA3600",
+   "location": "",
+   "date": "",
+   "desc": "The Lake-Shine Rhombus Ⅱ",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-270003-01.jpg",
+     "code": "GA36703"
+    },
+    {
+     "f": "case-270003-02.jpg",
+     "code": "GA36701"
+    },
+    {
+     "f": "case-270003-03.jpg",
+     "code": "GA36705"
+    },
+    {
+     "f": "case-270003-04.jpg",
+     "code": "GA36706"
+    },
+    {
+     "f": "case-270003-05.jpg",
+     "code": "GA36706"
+    }
+   ],
+   "home": 0,
+   "show": 1
+  },
+  {
+   "id": 300001,
+   "region": "台灣",
+   "title": "艾特電",
+   "series": "GA3600、GA400",
+   "location": "桃園",
+   "date": "202602",
+   "desc": "",
+   "cover": 0,
+   "photos": [
+    {
+     "f": "case-300001-01.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-02.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-03.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-04.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-05.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-06.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-07.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-08.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-09.jpg",
+     "code": ""
+    },
+    {
+     "f": "case-300001-10.jpg",
+     "code": ""
+    }
+   ],
+   "home": 1,
+   "show": 1
+  }
+ ],
+ "certs": [
+  {
+   "id": 1,
+   "title": "CRI",
+   "category": "環保認證",
+   "desc": "美國地毯協會CRI發佈的Green Label Plus認證",
+   "validUntil": "20260331",
+   "series": "GA3600",
+   "file": "c-cri.pdf",
+   "audio": "c-cri.m4a",
+   "logo": "c-cri-logo.png",
+   "show": 1
+  },
+  {
+   "id": 30001,
+   "title": "ECO LEAF認證",
+   "category": "環保認證",
+   "desc": "",
+   "validUntil": "2023年12月31日",
+   "series": "GA3600",
+   "file": "c-eco-leaf.pdf",
+   "audio": "c-eco-leaf.m4a",
+   "logo": "c-eco-leaf-logo.png",
+   "show": 1
+  },
+  {
+   "id": 30002,
+   "title": "ECO MARK",
+   "category": "永續再生認證",
+   "desc": "",
+   "validUntil": "2027年12月31日",
+   "series": "GA3600",
+   "file": "c-eco-mark.pdf",
+   "audio": "c-eco-mark.m4a",
+   "logo": "c-eco-mark-logo.jpg",
+   "show": 1
+  },
+  {
+   "id": 60001,
+   "title": "EPD",
+   "category": "環保認證",
+   "desc": "",
+   "validUntil": "2027年4月21日",
+   "series": "GA3600",
+   "file": "c-epd.pdf",
+   "audio": "c-epd.m4a",
+   "logo": "",
+   "show": 1
+  }
+ ],
+ "faqs": [
+  {
+   "id": 30001,
+   "category": "庫存",
+   "q": "TOLI地毯有現貨嗎？",
+   "a": "TOLI全商品在台灣都沒有庫存，全部都是下單後從日本船運到台灣。",
+   "sort": 1,
+   "show": 1
+  },
+  {
+   "id": 30002,
+   "category": "交期",
+   "q": "TOLI地毯交期要多久？",
+   "a": "通常營業同仁下單後大約1個月可以運抵台灣。",
+   "sort": 2,
+   "show": 1
+  },
+  {
+   "id": 60001,
+   "category": "產品",
+   "q": "TOLI官網上的產品都可以銷售嗎？",
+   "a": "官網裡的所有產品都可以個案進口，詳情可以詢問採購部許永斌或英邦窗口洪先生",
+   "sort": 2,
+   "show": 1
+  }
+ ]
+}
