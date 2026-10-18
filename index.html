@@ -122,6 +122,21 @@ section.tight{padding:56px 0}
 .aud label{display:block;font-size:12px;color:var(--faint);letter-spacing:.08em;margin-bottom:6px}
 audio{width:100%;max-width:420px;height:38px}
 
+/* ---------- 產品階層 ---------- */
+.lv{margin-bottom:52px}
+.lv-h{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;
+  padding-bottom:10px;border-bottom:1px solid var(--line)}
+.lv-h .n{font-size:10.5px;font-weight:700;letter-spacing:.14em;color:#fff;
+  background:var(--red);padding:3px 8px;flex-shrink:0}
+.lv-h .zh{font-size:14px;font-weight:700;letter-spacing:.1em}
+.lv-h .en{font-size:10.5px;font-weight:600;letter-spacing:.2em;color:var(--faint);text-transform:uppercase}
+.lv-h .cnt{margin-left:auto;font-size:12px;color:var(--faint)}
+
+.prod.l1{border-left:3px solid var(--red);background:var(--bg2);padding:34px}
+.prod.l1 h3{font-size:27px}
+.prod.l2{border-left:3px solid var(--ink)}
+.prod.l3 h3{font-size:19px}
+
 /* ---------- 篩選 ---------- */
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px;align-items:center}
 .chip{font-size:13px;padding:7px 15px;border:1px solid var(--line);border-radius:2px;
@@ -237,10 +252,10 @@ footer .logos img{height:24px;width:auto}
 <header>
   <div class="wrap hd">
     <a class="brand" href="#/">
-      <img src="assets/logo-aurora-furniture.jpg" alt="震旦家具" onerror="this.style.display='none'">
-      <img src="assets/logo-aurora-design.jpg" alt="大震設計" onerror="this.style.display='none'">
+      <img src="logo-aurora-furniture.jpg" alt="震旦家具" onerror="this.style.display='none'">
+      <img src="logo-aurora-design.jpg" alt="大震設計" onerror="this.style.display='none'">
       <span class="sep"></span>
-      <img src="assets/logo-toli.png" alt="TOLI" onerror="this.style.display='none'">
+      <img src="logo-toli.png" alt="TOLI" onerror="this.style.display='none'">
       <b>TOLI地毯產品資料庫</b>
     </a>
     <button class="burger" id="burger" aria-label="選單">☰</button>
@@ -261,9 +276,9 @@ footer .logos img{height:24px;width:auto}
     <div class="fg">
       <div>
         <div class="logos">
-          <img src="assets/logo-aurora-furniture.jpg" alt="震旦家具" onerror="this.style.display='none'">
-          <img src="assets/logo-aurora-design.jpg" alt="大震設計" onerror="this.style.display='none'">
-          <img src="assets/logo-toli.png" alt="TOLI" onerror="this.style.display='none'">
+          <img src="logo-aurora-furniture.jpg" alt="震旦家具" onerror="this.style.display='none'">
+          <img src="logo-aurora-design.jpg" alt="大震設計" onerror="this.style.display='none'">
+          <img src="logo-toli.png" alt="TOLI" onerror="this.style.display='none'">
         </div>
         <div class="ct" id="f-sub"></div>
       </div>
@@ -311,98 +326,122 @@ footer .logos img{height:24px;width:auto}
  },
  "products": [
   {
+   "id": "S3600",
+   "series": "GA3600",
+   "level": 1,
+   "subseries": "GA3600 系列",
+   "name": "GA3600 系列",
+   "desc": "高品質商用環保地毯解決方案。專為高端商業空間設計的高級地毯產品，提供優異品質、使用體驗與長久的使用壽命。",
+   "pdf": "",
+   "audio": "p-ga3600-series.m4a",
+   "youtube": "https://youtu.be/ibxSuJjdumk?si=euZul7Oh3NX7SQc2",
+   "show": 1
+  },
+  {
+   "id": 180001,
+   "series": "GA3600",
+   "level": 2,
+   "subseries": "Sustive Back",
+   "name": "Sustive Back",
+   "desc": "GA3600系列特有的環保背襯材質，提供優異的穩定性與耐用性",
+   "pdf": "p-sustive-back.pdf",
+   "audio": "p-sustive-back.m4a",
+   "youtube": "",
+   "show": 1
+  },
+  {
    "id": 1,
    "series": "GA3600",
+   "level": 3,
    "subseries": "The Lake",
    "name": "GA3600 The Lake",
    "desc": "",
    "pdf": "p-the-lake.pdf",
    "audio": "p-the-lake.m4a",
-   "seriesAudio": "p-the-lake-series.m4a",
-   "youtube": "https://youtu.be/ibxSuJjdumk?si=euZul7Oh3NX7SQc2",
-   "show": 1
-  },
-  {
-   "id": 30001,
-   "series": "GA400",
-   "subseries": "GA400",
-   "name": "GA400",
-   "desc": "PP聚丙烯材質，素色無圖案",
-   "pdf": "p-ga400.pdf",
-   "audio": "p-ga400.m4a",
-   "seriesAudio": "",
    "youtube": "",
    "show": 1
   },
   {
    "id": 90001,
    "series": "GA3600",
+   "level": 3,
    "subseries": "The Ground",
    "name": "GA3600 The Ground",
    "desc": "",
    "pdf": "p-the-ground.pdf",
    "audio": "p-the-ground.m4a",
-   "seriesAudio": "",
    "youtube": "",
    "show": 1
   },
   {
    "id": 120001,
    "series": "GA3600",
+   "level": 3,
    "subseries": "The Bark",
    "name": "GA3600 The Bark",
    "desc": "",
    "pdf": "p-the-bark.pdf",
    "audio": "p-the-bark.m4a",
-   "seriesAudio": "",
    "youtube": "",
    "show": 1
   },
   {
-   "id": 150001,
+   "id": "S400",
    "series": "GA400",
-   "subseries": "GA400S",
-   "name": "GA400S",
-   "desc": "",
-   "pdf": "p-ga400s.pdf",
-   "audio": "p-ga400s.m4a",
-   "seriesAudio": "",
+   "level": 1,
+   "subseries": "GA400 系列",
+   "name": "GA400 系列",
+   "desc": "多樣化簡約產品線，包含四大系列，PP 聚丙烯材質，提供更多元的選擇與規格組合。",
+   "pdf": "",
+   "audio": "",
    "youtube": "",
    "show": 1
   },
   {
-   "id": 150002,
+   "id": 30001,
    "series": "GA400",
-   "subseries": "GA400RS",
-   "name": "GA400RS",
-   "desc": "",
-   "pdf": "p-ga400rs.pdf",
-   "audio": "p-ga400rs.m4a",
-   "seriesAudio": "",
+   "level": 3,
+   "subseries": "GA400",
+   "name": "GA400",
+   "desc": "PP聚丙烯材質，素色無圖案",
+   "pdf": "p-ga400.pdf",
+   "audio": "p-ga400.m4a",
    "youtube": "",
    "show": 1
   },
   {
    "id": 150003,
    "series": "GA400",
+   "level": 3,
    "subseries": "GA400A",
    "name": "GA400A",
    "desc": "",
    "pdf": "p-ga400a.pdf",
    "audio": "p-ga400a.m4a",
-   "seriesAudio": "",
    "youtube": "",
    "show": 1
   },
   {
-   "id": 180001,
-   "series": "GA3600",
-   "subseries": "Sustive Back",
-   "name": "Sustive Back",
-   "desc": "GA3600系列特有的環保背襯材質，提供優異的穩定性與耐用性",
-   "pdf": "p-sustive-back.pdf",
-   "audio": "p-sustive-back.m4a",
-   "seriesAudio": "",
+   "id": 150001,
+   "series": "GA400",
+   "level": 3,
+   "subseries": "GA400S",
+   "name": "GA400S",
+   "desc": "",
+   "pdf": "p-ga400s.pdf",
+   "audio": "p-ga400s.m4a",
+   "youtube": "",
+   "show": 1
+  },
+  {
+   "id": 150002,
+   "series": "GA400",
+   "level": 3,
+   "subseries": "GA400RS",
+   "name": "GA400RS",
+   "desc": "",
+   "pdf": "p-ga400rs.pdf",
+   "audio": "p-ga400rs.m4a",
    "youtube": "",
    "show": 1
   }
@@ -1120,7 +1159,21 @@ footer .logos img{height:24px;width:auto}
    "sort": 2,
    "show": 1
   }
- ]
+ ],
+ "levels": {
+  "1": {
+   "zh": "系列",
+   "en": "Series"
+  },
+  "2": {
+   "zh": "底材",
+   "en": "Backing"
+  },
+  "3": {
+   "zh": "設計主題",
+   "en": "Collection"
+  }
+ }
 }
 </script>
 
@@ -1132,7 +1185,9 @@ var CONFIG = {
   // 部署好 Google Apps Script 後，把網址填在這裡，資料就會改從後台即時讀取。
   // 留空 = 讀取同資料夾的 data.json
   API_URL: '',
-  ASSETS: 'assets/'
+  // 檔案放在哪裡。124 個檔案直接放在 repo 根目錄 → 留空字串；
+  // 若之後改放進 assets 資料夾，改成 'assets/' 並把下方 6 個 logo 的 src 加回 assets/
+  ASSETS: ''
 };
 
 /* ==========================================================
@@ -1194,7 +1249,7 @@ document.addEventListener('keydown', function (e) {
 function buildIndex() {
   var ix = [];
   DB.products.filter(function (p) { return p.show; }).forEach(function (p) {
-    ix.push({ t: '產品', title: p.name, sub: p.series + ' 系列' + (p.desc ? '　' + p.desc : ''),
+    ix.push({ t: '產品', title: p.subseries, sub: p.series + ' 系列' + (p.desc ? '　' + p.desc : ''),
       href: '#/products?s=' + p.series, key: [p.name, p.series, p.subseries, p.desc].join(' ') });
   });
   DB.cases.filter(function (c) { return c.show; }).forEach(function (c) {
@@ -1295,30 +1350,50 @@ function caseCard(c) {
     c.photos.length + ' 張照片</div></div></a>';
 }
 
+function prodBlock(p, lv) {
+  var acts = '';
+  if (p.pdf) acts += '<a class="btn pri" href="' + A(p.pdf) + '" target="_blank" rel="noopener">' +
+    ICON.pdf + (lv === 2 ? '電子型錄' : '產品規格 PDF') + '</a>';
+  if (p.youtube) acts += '<a class="btn" href="' + esc(p.youtube) + '" target="_blank" rel="noopener">' +
+    ICON.yt + '系列影片</a>';
+  var aud = '';
+  if (p.audio) aud = '<div class="aud"><label>' +
+    (lv === 1 ? '系列介紹語音' : lv === 2 ? '底材介紹語音' : '設計理念語音') +
+    '</label><audio controls preload="none" src="' + A(p.audio) + '"></audio></div>';
+
+  return '<div class="prod l' + lv + '"><div class="top">' +
+    (lv === 1 ? '' : '<span class="code">' + esc(p.series) + '</span>') +
+    '<h3>' + esc(p.subseries) + '</h3></div>' +
+    (p.desc ? '<p class="dsc">' + esc(p.desc) + '</p>' : '') +
+    (acts ? '<div class="acts">' + acts + '</div>' : '') + aud + '</div>';
+}
+
 function pageProducts(qs) {
   var want = (qs && qs.s) || 'GA3600';
-  var list = DB.products.filter(function (p) { return p.show && p.series === want; });
+  var all = DB.products.filter(function (p) { return p.show && p.series === want; });
   var tabs = ['GA3600', 'GA400'].map(function (s) {
     return '<button class="' + (s === want ? 'on' : '') + '" onclick="location.hash=\'#/products?s=' + s + '\'">' + s + ' 系列</button>';
   }).join('');
 
-  var items = list.map(function (p) {
-    var acts = '';
-    if (p.pdf) acts += '<a class="btn pri" href="' + A(p.pdf) + '" target="_blank" rel="noopener">' + ICON.pdf + '產品規格 PDF</a>';
-    if (p.youtube) acts += '<a class="btn" href="' + esc(p.youtube) + '" target="_blank" rel="noopener">' + ICON.yt + '系列影片</a>';
-    var aud = '';
-    if (p.audio) aud += '<div class="aud"><label>設計理念語音</label><audio controls preload="none" src="' + A(p.audio) + '"></audio></div>';
-    if (p.seriesAudio) aud += '<div class="aud"><label>系列介紹語音</label><audio controls preload="none" src="' + A(p.seriesAudio) + '"></audio></div>';
-    return '<div class="prod"><div class="top"><span class="code">' + esc(p.series) + '</span>' +
-      '<h3>' + esc(p.subseries) + '</h3></div>' +
-      (p.desc ? '<p class="dsc">' + esc(p.desc) + '</p>' : '') +
-      (acts ? '<div class="acts">' + acts + '</div>' : '') + aud + '</div>';
-  }).join('');
+  var L = DB.levels || { '1': { zh: '系列', en: 'Series' }, '2': { zh: '底材', en: 'Backing' }, '3': { zh: '設計主題', en: 'Collection' } };
+  var body = '';
+
+  [1, 2, 3].forEach(function (lv) {
+    var items = all.filter(function (p) { return (p.level || 3) === lv; });
+    if (!items.length) return;
+    var lab = L[String(lv)] || { zh: '', en: '' };
+    var head = '<div class="lv-h"><span class="n">第 ' + lv + ' 階</span>' +
+      '<span class="zh">' + esc(lab.zh) + '</span><span class="en">' + esc(lab.en) + '</span>' +
+      (lv === 3 ? '<span class="cnt">' + items.length + ' 項</span>' : '') + '</div>';
+    var cards = items.map(function (p) { return prodBlock(p, lv); }).join('');
+    body += '<div class="lv">' + head +
+      (lv === 3 ? '<div class="grid g3 sp">' + cards + '</div>' : cards) + '</div>';
+  });
 
   return '<section class="tight"><div class="wrap">' +
     heading('產品系列', 'Item Lineup', '本公司引進之 TOLI 規格商品：' + DB.site.stockNote) +
     '<div class="tabs">' + tabs + '</div>' +
-    (items ? '<div class="grid g2 sp">' + items + '</div>' : '<div class="empty">此系列尚無資料</div>') +
+    (body || '<div class="empty">此系列尚無資料</div>') +
   '</div></section>';
 }
 
